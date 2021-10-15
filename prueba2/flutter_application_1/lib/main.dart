@@ -35,7 +35,7 @@ class _InicioState extends State<Inicio> {
               children: [
                 Icon(Icons.access_time),
                 SizedBox(width: 15),
-                Text("Now"),
+                Text("Prueba del hot reload fucionando"),
               ],
             ),
             onPressed: () {
