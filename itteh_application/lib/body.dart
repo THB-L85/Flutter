@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:itteh_application/colores.dart';
 
 class Body extends StatelessWidget {
@@ -30,7 +31,7 @@ class ScrollCont extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 120,
+          height: 114,
           margin:
               EdgeInsets.symmetric(vertical: 6, horizontal: dDefaultPadding),
           decoration: BoxDecoration(
@@ -96,10 +97,10 @@ class SearchBar extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Positioned(
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
+            top: 0, //
+            bottom: 0, // Esto posiciona la barra de busqueda al centro
+            left: 0, //
+            right: 0, //
             child: Container(
               // esto alinea el contenedor
               alignment: Alignment.center,
@@ -109,19 +110,24 @@ class SearchBar extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: dDefaultPadding),
               height: 54,
               decoration: BoxDecoration(
-                color: Colors.grey,
+                color: cSerchBar,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: "Serch for",
-                  hintStyle: TextStyle(
-                    color: cFontColor.withOpacity(0.5),
-                  ),
-                  // esto quita los bordes cuando se esta escribiendo
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
-                  suffixIcon: Icon(Icons.search),
+              child: Opacity(
+                opacity: 0.2,
+                child: TextField(
+                  decoration: InputDecoration(
+                      hintText: "Serch for",
+                      hintStyle: TextStyle(
+                        color: cFontColor.withOpacity(0.4),
+                      ),
+                      // esto quita los bordes cuando se esta escribiendo
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
+                      suffixIcon:
+                          Icon(Icons.search) // con esto colocamos el icono
+                      //SvgPicture.asset("assets/icons/search.svg"),
+                      ),
                 ),
               ),
             ),

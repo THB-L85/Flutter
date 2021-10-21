@@ -5,6 +5,7 @@ const cBackgroundColor = Color(0XFFFFFFFF);
 const cPrimaryColor = Color(0xFF8C97E9);
 const cSecudaryColor = Color(0xFFECEAFF);
 const cFontColor = Color(0xFF000000);
+const cSerchBar = Color(0xFFF6F6F6);
 
 // Default padding
 const double dDefaultPadding = 20.0;
