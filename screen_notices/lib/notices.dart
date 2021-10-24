@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const cPrimaryColor = Color(0xFF6DBA7D);
 const cFontColor = Color(0xFF468DA4);
+const cGreyCustom = Color(0xFFCACACA);
 const cSearchBar = Color(0xFFF6F6F6);
 const double dDefaultPadding = 20.0;
 
@@ -86,9 +87,41 @@ class ScreenNotices extends StatelessWidget {
             ],
           ),
           Container(
-            height: 20,
-            color: cPrimaryColor.withOpacity(0.61),
-          )
+            height: 130.0,
+            margin: const EdgeInsets.only(top: 25.0, right: 15.0, left: 15.0),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                color: cPrimaryColor.withOpacity(0.61)),
+            child: Stack(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 12.0, left: 12.0),
+                  child: const Text(
+                    "Regreso a clases presenciales",
+                    style: TextStyle(color: Colors.white, fontSize: 14.0),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Container(
+                    height: 75.0,
+                    width: 75.0,
+                    margin: const EdgeInsets.only(bottom: 12.0, left: 12.0),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        color: cGreyCustom),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 41.0, left: 114),
+                    child: const Text("06 Jan 21, 09:00 AM"),
+                  ),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
