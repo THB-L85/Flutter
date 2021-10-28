@@ -24,7 +24,7 @@ class _CareersState extends State<Careers> {
         centerTitle: true,
         titleTextStyle: const TextStyle(
             fontFamily: "Roboto",
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w600,
             fontSize: 18.0,
             color: Colors.black),
         leading: const Icon(
@@ -47,12 +47,15 @@ class _CareersState extends State<Careers> {
                 decoration: BoxDecoration(
                     color: cSearchBar,
                     borderRadius: BorderRadius.circular(15.0)),
-                child: const TextField(
-                  decoration: InputDecoration(
-                      hintText: "Search for",
-                      focusedBorder: InputBorder.none,
-                      enabledBorder: InputBorder.none,
-                      suffixIcon: Icon(Icons.search)),
+                child: const Opacity(
+                  opacity: 0.3,
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Search for",
+                        focusedBorder: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        suffixIcon: Icon(Icons.search)),
+                  ),
                 ),
               ),
               Container(
@@ -62,7 +65,7 @@ class _CareersState extends State<Careers> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
                     color: cSearchBar),
-                child: const Icon(Icons.tune),
+                child: const Opacity(opacity: 0.3, child: Icon(Icons.tune)),
               )
             ],
           ),
